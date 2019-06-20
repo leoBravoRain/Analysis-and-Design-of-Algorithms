@@ -13,9 +13,9 @@
 using namespace std; 
 
 // Function for resolve pattern matching
-// stack<int> locate(char *text, int n, char *pattern, int m){
-// stack<int> locate(string text, int n, char *pattern, int m){
-stack<int> locate(string text, int n, string pattern, int m){
+// stack<int> locate_brute_force(char *text, int n, char *pattern, int m){
+// stack<int> locate_brute_force(string text, int n, char *pattern, int m){
+stack<int> locate_brute_force(string text, int n, string pattern, int m){
 
     /*Ocurrence stack*/
     stack <int> occ_stack;
@@ -133,7 +133,7 @@ int main(int argc, char *argv[]){
             t_start = clock();
 
             // Get ocurrences
-            occurrences = locate(str, n, pattern, m);
+            occurrences = locate_brute_force(str, n, pattern, m);
 
             // Get taken time
             time = (float)(clock() - t_start)/CLOCKS_PER_SEC;
